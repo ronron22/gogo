@@ -18,11 +18,11 @@ type Target struct {
     MyTarget  string
 }
 
-var host *Target
+var target *Target
 
 func init() {
-    host = &Target{}
-    flag.StringVar(&host.MyTarget, "cible", "", "cible du ping")
+    target = &Target{}
+    flag.StringVar(&target.MyTarget, "cible", "", "cible du ping")
 }
 
 func (h Target) TestPing() *ping.Statistics {
@@ -44,15 +44,14 @@ func (h Target) TestPing() *ping.Statistics {
 }
 
 func Testing(u  NetworkTests) {
-    fmt.Println(u)
+    fmt.Println("ping de ", u)
     fmt.Println(u.TestPing())
 }
 
 func main() {
     
     flag.Parse()
-    //h := Target{MyTarget: "google.fr"}
-    h := Target{MyTarget: host}
+    h := Target{MyTarget: target.MyTarget}
     
     Testing(h)
 }
