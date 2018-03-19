@@ -1,5 +1,8 @@
 package main
 
+// https://gist.github.com/dustin/1777162
+// le modifier pour tourner sous inetd
+
 import (
 	"fmt"
 	"log"
