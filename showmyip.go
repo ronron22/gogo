@@ -19,6 +19,6 @@ func rootHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.HandleFunc("/", rootHandler)
+	http.HandleFunc("/ip", rootHandler)
 	log.Fatal(http.ListenAndServe(":8081", nil))
 }
