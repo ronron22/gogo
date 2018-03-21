@@ -1,0 +1,9 @@
+C -- get /mydns --> W
+W -- x22fg.opendns.io --> C || (opendns.io renvoi le nom d'un sousdomaine inexistant à résoudre)
+C -- req DNS x22fg.opendns.io --> DNS FAI
+DNS FAI -- req DNS x22fg.opendns.io --> DNS opendns.io  || le serveur log la requête du FAI
+---
+le serveur web écrit le domaine donnée, puis le recherche dans les logs dns et renvoi le résultat au client
+
+
+
