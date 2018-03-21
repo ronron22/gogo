@@ -1,5 +1,7 @@
 package main
 
+// https://siongui.github.io/2016/01/09/go-sqlite-example-basic-usage/
+
 import (
 	"database/sql"
 	"fmt"
@@ -37,7 +39,7 @@ func main() {
 	/*b, err := os.Args[2]
 	c, err := os.Args[3]*/
 
-_, err = db.Exec("insert into foo(id, name) values(1, 'a'), (2,'a'), (3, 'a')")
+_, err = db.Exec("insert into foo(id, name) values(1, "%s"), (2,'a'), (3, 'a')", a)
 	if err != nil {
 		log.Fatal(err)
 	}
