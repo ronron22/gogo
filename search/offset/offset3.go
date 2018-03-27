@@ -24,7 +24,7 @@ func main() {
         log.Fatal(err)
     }
     //fmt.Println("Just moved to 5:", newPosition)
-    fmt.Printf("Just moved to %d: %d\n", offset, newPosition)
+    t.Printf("Just moved to %d: %d\n", offset, newPosition)
 
     // Go back 2 bytes from current position
     newPosition, err = file.Seek(-2, 1)
